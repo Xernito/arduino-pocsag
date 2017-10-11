@@ -23,8 +23,8 @@
 #define ledPin 13
 #define bitPeriod 833
 #define halfBitPeriod 416
-#define prmbWord 1431655765
-#define syncWord 2094142936
+#define prmbWord 1431655765 //
+#define syncWord 2094142936 //Binär: 0111 1100 1101 0010 0001 0101 1101 1000
 #define idleWord 2055848343
 
 #define STATE_WAIT_FOR_PRMB 0
