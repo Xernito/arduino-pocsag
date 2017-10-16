@@ -32,7 +32,7 @@
 #define STATE_PROCESS_BATCH 2
 #define STATE_PROCESS_MESSAGE 3
 
-static const char *functions[4] = {"Function A", "Function B","Function C", "Function D"};
+static const char *functions[4] = {"A", "B", "C", "D"};
 
 volatile unsigned long buffer = 0;
 volatile int bitcounter = 0;
@@ -45,9 +45,9 @@ unsigned long wordbuffer[81];
 
 void setup()
 {
-  pinMode(receiverPin, INPUT);
+  pinMode(receiverPin, INPUT_PULLUP); //RF Board need no Pullup resitor
   pinMode(triggerPin, OUTPUT);
-  disable_led();
+  pinMode(ledPin, OUTPUT);
   disable_trigger();
   start_flank();
   Timer1.initialize(bitPeriod);  
